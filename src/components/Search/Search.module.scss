@@ -1,0 +1,43 @@
+.root {
+  position: relative;
+  left: -120px;
+
+  img:first-child {
+    position: absolute;
+    top: 11px;
+    left: 10px;
+    width: 24px;
+    height: 24px;
+    opacity: 0.3;
+  }
+
+  img:last-child {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    opacity: 0.3;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+
+  input {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 12px 20px 12px 40px;
+    width: 300px;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.15s ease-in-out;
+
+    &:focus {
+      border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+  }
+}
