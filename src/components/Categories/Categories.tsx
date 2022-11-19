@@ -1,35 +1,32 @@
 import { FC } from "react";
-import { useAppDispatch, useAppSelector } from "../../hooks/useRedux";
-import { changeCategory } from "../../store/filter/filterSlice";
+import { useAppDispatch } from "../../hooks/redux";
+import { changeCategory } from "../../store/filter/slice";
 
 import style from "./Categories.module.scss";
 
 const categories = [
-  "Все",
-  "Мясные",
-  "Вегетарианская",
-  "Гриль",
-  "Острые",
-  "Пепперони",
+  "All",
+  "Meaty",
+  "Vegetarian",
+  "Grill",
+  "Acute",
+  "Pepperoni",
 ];
 
-const Categories: FC = () => {
+const Categories: FC<{ categoryId: Number }> = ({ categoryId }) => {
   const dispatch = useAppDispatch();
-  const { categoryId } = useAppSelector((state) => state.filterReducer);
   return (
-    <div className={style.root}>
-      <ul>
-        {categories.map((value, i) => (
-          <li
-            key={value}
-            onClick={() => dispatch(changeCategory(i))}
-            className={categoryId === i ? style.active : ""}
-          >
-            {value}
-          </li>
-        ))}
-      </ul>
-    </div>
+    <ul className={style.root}>
+      {categories.map((value, i) => (
+        <li
+          key={value}
+          onClick={() => dispatch(changeCategory(i))}
+          className={categoryId === i ? style.active : ""}
+        >
+          {value}
+        </li>
+      ))}
+    </ul>
   );
 };
 

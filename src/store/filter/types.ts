@@ -1,8 +1,8 @@
 export enum Sorts {
-  RATING = "_sort=rating&_order=desc",
-  PRICE_DESC = "_sort=price&_order=desc",
-  PRICE_ASC = "_sort=price&_order=asc",
-  TITLE = "_sort=title&_order=asc",
+  RATING = "rating",
+  PRICE_DESC = "price",
+  PRICE_ASC = "-price",
+  TITLE = "-title",
 }
 
 export type SortType = {

@@ -9,6 +9,5 @@ export type CartPizza = {
 };
 
 export interface CartState {
-  totalPrice: number;
   cartItems: CartPizza[];
 }

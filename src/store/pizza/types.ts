@@ -1,5 +1,3 @@
-import { Sorts } from "../filter/types";
-
 export type Pizza = {
   id: number;
   imageUrl: string;
@@ -9,6 +7,7 @@ export type Pizza = {
   price: number;
   category: number;
   rating: number;
+  ingredients: string;
 };
 
 export enum Status {
@@ -18,13 +17,15 @@ export enum Status {
 }
 
 export type SearchPizzaParams = {
-  sortBy: Sorts;
-  category: number;
-  // search: string;
-  currentPage: string;
+  _sort: string;
+  _order: "asc" | "desc";
+  category: string | undefined;
+  q: string;
+  _page: number;
 };
 
 export interface PizzasState {
   pizzas: Pizza[];
+  totalCount: number;
   status: Status;
 }

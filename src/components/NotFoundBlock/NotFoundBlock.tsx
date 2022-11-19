@@ -3,9 +3,9 @@ import style from "./NotFoundBlock.module.scss";
 
 const NotFoundBlock: FC = () => {
   return (
-    <h1 className={style.notFoundBlock}>
+    <h1 className={style.root}>
       <span>😕</span>
-      <p>Ничего не найдено</p>
+      <p>Nothing found</p>
     </h1>
   );
 };

@@ -1,0 +1,68 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.root {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 80px 140px 60px 160px 50px 45px;
+  grid-template-areas:
+    "goBack goBack"
+    "img title"
+    "img ingredients"
+    "img selector"
+    "img price"
+    "img button";
+  @include container($width: $container-width);
+  padding: 10px 0 200px;
+
+  a:first-child {
+    grid-area: goBack;
+    justify-self: start;
+    margin: 15px 0;
+    height: 45px;
+    width: 165px;
+  }
+
+  img:first-child {
+    grid-area: img;
+    width: 80%;
+    justify-self: center;
+  }
+
+  h2 {
+    grid-area: title;
+    align-self: end;
+    margin-bottom: 20px;
+    font-size: 34px;
+  }
+
+  span {
+    grid-area: ingredients;
+    font-size: 18px;
+    line-height: 145.4%;
+    letter-spacing: 0.01em;
+    color: #777777;
+  }
+
+  .selector {
+    grid-area: selector;
+    text-align: center;
+    margin-top: 20px;
+    padding: 0 80px 0 0;
+  }
+
+  p {
+    grid-area: price;
+    align-self: center;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0.015em;
+  }
+
+  button:last-child {
+    grid-area: button;
+    justify-self: start;
+    width: 20vw;
+  }
+}

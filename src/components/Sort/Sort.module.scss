@@ -2,6 +2,13 @@
 
 .root {
   position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin: auto 0 auto auto;
+  // display: flex;
+  // align-items: center;
+  // justify-content: flex-end;
+  grid-area: sort;
   label {
     display: flex;
     align-items: center;
@@ -23,8 +30,8 @@
 
   .popup {
     position: absolute;
-    right: 0;
-    margin-top: 15px;
+    top: 35px;
+    right: -5px;
     background: #ffffff;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
     border-radius: 10px;

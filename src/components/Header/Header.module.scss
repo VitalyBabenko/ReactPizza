@@ -1,18 +1,19 @@
 @import "../../scss/variables";
-@import "../../scss/libs/normalize";
+@import "../../scss/normalize";
+@import "../../scss/mixins";
+
 .root {
+  @include flex($justify: space-between, $align: center);
   border-bottom: 1px solid $gray-line;
   padding: 40px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   width: $container-width;
   margin: 0 auto;
 
   .logo {
     display: flex;
 
-    img[alt="Pizza logo"] {
+    svg {
+      width: 45px;
       margin-right: 15px;
     }
 
@@ -30,16 +31,19 @@
   }
 
   .cart {
-    display: flex;
-    padding: 12px 25px;
+    @include flex($align: center);
+    @extend %appButton;
     background-color: $orange;
-    border-radius: 30px;
     padding: 10px 20px;
-    min-width: 100px;
-    cursor: pointer;
-    transition: background-color $duration ease-in-out,
-      border-color $duration ease-in-out;
-    border: 1px solid transparent;
+
+    &:hover {
+      background-color: darken($orange, 8%);
+    }
+
+    &:active {
+      background-color: darken($orange, 12%);
+      transform: translateY(1px);
+    }
 
     .delimiter {
       width: 1px;
@@ -51,9 +55,14 @@
 
     @include noselect();
 
-    img {
+    svg {
+      width: 20px;
       margin-right: 8px;
       margin-bottom: 1px;
+      path,
+      circle {
+        stroke: white;
+      }
     }
 
     span {

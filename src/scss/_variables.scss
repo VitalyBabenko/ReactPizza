@@ -2,7 +2,16 @@ $black: #232323;
 $background: #ffdf8c;
 $gray-line: #f6f6f6;
 $orange: #fe5f1e;
-
 $container-width: 90%;
-
 $duration: 0.15s;
+
+%appButton {
+  display: inline-block;
+  min-width: 100px;
+  border: 1px solid $orange;
+  border-radius: 30px;
+  text-align: center;
+  background-color: #fff;
+  transition: all $duration ease-in-out;
+  cursor: pointer;
+}

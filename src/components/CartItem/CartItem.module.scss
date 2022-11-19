@@ -1,5 +1,6 @@
 @import "../../scss/variables";
-@import "../../scss/libs/normalize";
+@import "../../scss/normalize";
+@import "../../scss/mixins";
 
 .root {
   display: flex;
@@ -41,6 +42,7 @@
     align-items: center;
     justify-content: space-between;
     width: 13%;
+    min-width: 90px;
   }
 
   .price {
@@ -49,5 +51,157 @@
     font-weight: bold;
     font-size: 22px;
     letter-spacing: 0.01em;
+  }
+}
+
+.plus {
+  @include flex($justify: center, $align: center);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid $orange;
+  background-color: white;
+  transition: all 0.05s ease-in-out;
+
+  svg {
+    width: 45%;
+    height: 45%;
+  }
+
+  &:hover {
+    background-color: darken($orange, 8%);
+    transform: scale(1.15);
+    svg path {
+      fill: white;
+    }
+  }
+
+  &:active {
+    background-color: darken($orange, 15%);
+    transform: scale(1.25);
+    svg path {
+      fill: white;
+    }
+  }
+}
+
+.minus {
+  @extend .plus;
+  svg path:first-child {
+    display: none;
+  }
+
+  &:disabled {
+    border-color: darken($color: $gray-line, $amount: 10);
+
+    svg path {
+      fill: darken($color: $gray-line, $amount: 10);
+    }
+
+    path {
+      fill: darken($color: $gray-line, $amount: 15);
+    }
+
+    &:hover {
+      transform: scale(1.2);
+      background-color: lighten($color: $black, $amount: 45);
+    }
+    &:active {
+      transform: scale(1.3);
+    }
+  }
+}
+
+.remove {
+  @extend .plus;
+  border-color: darken($color: $gray-line, $amount: 10);
+  transform: rotate(45deg);
+
+  path {
+    fill: darken($color: $gray-line, $amount: 15);
+  }
+
+  &:hover {
+    transform: rotate(45deg) scale(1.2);
+    background-color: lighten($color: $black, $amount: 45);
+  }
+  &:active {
+    transform: rotate(45deg) scale(1.3);
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .root {
+    justify-content: space-between;
+    .price {
+      margin: auto;
+    }
+  }
+}
+@media screen and (max-width: 690px) {
+  .root {
+    position: relative;
+    display: grid;
+    grid-template-columns: 45% 1fr;
+    grid-template-rows: 1fr 70px;
+    grid-template-areas:
+      "img info info"
+      "counter price remove";
+
+    img:first-of-type {
+      margin: 0;
+      grid-area: img;
+      width: 130px;
+      height: 130px;
+      justify-self: center;
+    }
+
+    .info {
+      grid-area: info;
+      width: 90%;
+      justify-self: start;
+    }
+    .counter {
+      grid-area: counter;
+      justify-self: center;
+      width: 100px;
+    }
+
+    .price {
+      grid-area: price;
+      justify-self: center;
+      margin: 0;
+    }
+
+    .remove {
+      position: absolute;
+      top: 25px;
+      right: 7px;
+    }
+  }
+}
+@media screen and (max-width: 473px) {
+  .root {
+    grid-template-columns: 1fr;
+    grid-template-rows: 170px 80px 50px;
+    grid-template-areas:
+      "img "
+      "info"
+      "price"
+      "counter";
+
+    img:first-of-type {
+      width: 150px;
+      height: 150px;
+    }
+
+    .info {
+      text-align: center;
+      justify-self: center;
+    }
+    .price {
+      margin-left: 14px;
+      align-self: center;
+    }
   }
 }

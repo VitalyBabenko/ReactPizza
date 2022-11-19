@@ -1,0 +1,31 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.root {
+  padding: 150px 0;
+  @include flex($justify: center, $align: center, $direction: column);
+
+  span {
+    font-size: 30px;
+    font-weight: 700;
+    color: $orange;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 20px;
+    padding: 0 15%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 713px) {
+  .root {
+    padding: 100px 0;
+  }
+}

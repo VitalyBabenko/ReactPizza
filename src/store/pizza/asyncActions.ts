@@ -1,24 +1,16 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { setTotalCount } from "./slice";
 import { Pizza, SearchPizzaParams } from "./types";
 
 export const fetchPizzas = createAsyncThunk<Pizza[], SearchPizzaParams>(
   "pizzas/fetch",
-  async (params) => {
-    const category = params.category > 0 ? `category=${params.category}&` : "";
-    const pagination = `_page=${params.currentPage}&_limit=8&`;
-    const sort = params.sortBy;
-
-    const { data } = await axios.get<Pizza[]>(
-      `http://localhost:3001/pizzas?${category + pagination + sort}`
-    );
-    console.log(data);
-    return data;
+  async (params, thunkAPI) => {
+    const { q, _sort, _order, category, _page } = params;
+    const resp = await axios.get<Pizza[]>(`http://localhost:3001/pizzas`, {
+      params: { q, _sort, _order, _page, _limit: 8, category },
+    });
+    thunkAPI.dispatch(setTotalCount(Number(resp.headers["x-total-count"])));
+    return resp.data;
   }
 );
-
-// export const fetchPizzaById = createAsyncThunk('pizza/fetchById',
-//     async(id:number) => {
-//         const {data} = await axios.get()
-//     }
-// )

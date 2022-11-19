@@ -2,213 +2,249 @@
      {
       "id": 0,
       "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
-      "title": "Пепперони Фреш с перцем 🌶️",
+      "title": "Pepperoni Fresh with pepper 🌶️",
       "types": [0, 1],
       "sizes": [26, 30, 40],
-      "price": 803,
+      "price": 8.75,
       "category": 4,
-      "rating": 4
+      "rating": 4,
+      "ingredients": "Spicy pepperoni, signature tomato sauce, mozzarella, spicy chorizo, sweet pepper"
     },
     {
       "id": 1,
       "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/2ffc31bb-132c-4c99-b894-53f7107a1441.jpg",
-      "title": "Сырная",
+      "title": "Cheese",
       "types": [0],
       "sizes": [26, 40],
-      "price": 245,
+      "price": 6.99,
       "category": 0,
-      "rating": 6
+      "rating": 6,
+      "ingredients": "Mozzarella, cheddar and parmesan cheeses, signature alfredo sauce"
     },
     {
       "id": 2,
       "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/6652fec1-04df-49d8-8744-232f1032c44b.jpg",
-      "title": "Цыпленок барбекю",
+      "title": "Barbecue chicken",
       "types": [0],
       "sizes": [26, 40],
-      "price": 295,
+      "price": 9.99,
       "category": 3,
-      "rating": 4
+      "rating": 4,
+      "ingredients": "Chicken, bacon, barbecue sauce, red onion, mozzarella, special tomato sauce"
     },
     {
       "id": 3,
       "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/af553bf5-3887-4501-b88e-8f0f55229429.jpg",
-      "title": "Кисло-сладкий цыпленок",
+      "title": "Sweet and sour chicken",
       "types": [1],
       "sizes": [26, 30, 40],
-      "price": 275,
+      "price": 8.59,
       "category": 1,
-      "rating": 2
+      "rating": 2,
+      "ingredients": "Chicken, pineapple, curry sauce, red onion, bell pepper, mozzarella, signature tomato sauce"
     },
     {
       "id": 4,
       "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg",
-      "title": "Чизбургер-пицца",
+      "title": "Cheeseburger pizza",
       "types": [0, 1],
       "sizes": [26, 30, 40],
-      "price": 415,
+      "price": 8.79,
       "category": 1,
-      "rating": 8
+      "rating": 8,
+      "ingredients": "Bolognese meat sauce, burger sauce, pickled cucumbers, tomatoes, red onion, mozzarella"
     },
     {
       "id": 5,
       "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/1e1a6e80-b3ba-4a44-b6b9-beae5b1fbf27.jpg",
-      "title": "Крэйзи пепперони",
+      "title": "Crazy pepperoni",
       "types": [0],
       "sizes": [30, 40],
-      "price": 580,
+      "price": 14.99,
       "category": 5,
-      "rating": 2
+      "rating": 2,
+      "ingredients": "pepperoni, extra mozzarella, signature tomato sauce, tomatoes, red onion"
     },
     {
       "id": 6,
       "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/d2e337e9-e07a-4199-9cc1-501cc44cb8f8.jpg",
-      "title": "Пепперони",
+      "title": "Pepperoni",
       "types": [0, 1],
       "sizes": [26, 30, 40],
-      "price": 675,
+      "price": 8.99,
       "category": 5,
-      "rating": 9
+      "rating": 9,
+      "ingredients": "Spicy pepperoni, extra mozzarella, signature tomato sauce"
     },
     {
       "id": 7,
       "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/d48003cd-902c-420d-9f28-92d9dc5f73b4.jpg",
-      "title": "Маргарита 🌱",
+      "title": "Margarita 🌱",
       "types": [0, 1],
       "sizes": [26, 30, 40],
-      "price": 450,
+      "price": 7.85,
       "category": 2,
-      "rating": 10
+      "rating": 10,
+      "ingredients": "Extra mozzarella, tomatoes, Italian herbs, signature tomato sauce"
     },
     {
       "id": 8,
       "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/ec29465e-606b-4a04-a03e-da3940d37e0e.jpg",
-      "title": "Четыре сезона",
+      "title": "Four seasons",
       "types": [0, 1],
       "sizes": [26, 30, 40],
-      "price": 395,
-      "category": 5,
-      "rating": 10
+      "price": 9.99,
+      "category": 1,
+      "rating": 10,
+      "ingredients": "Extra mozzarella, ham, spicy pepperoni, cheese cubes, tomatoes, champignons, Italian herbs, signature tomato sauce"
     },
     {
       "id": 9,
       "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/30367198-f3bd-44ed-9314-6f717960da07.jpg",
-      "title": "Овощи и грибы 🌱",
+      "title": "Vegetables & mushrooms 🌱",
       "types": [0, 1],
       "sizes": [26, 30, 40],
-      "price": 285,
+      "price": 12.59,
       "category": 2,
-      "rating": 7
+      "rating": 7,
+      "ingredients": "Mushrooms, tomatoes, sweet peppers, red onions, cheese cubes, mozzarella, special tomato sauce, Italian herbs"
     },
     {
       "id": 10,
       "imageUrl": "https://cdn.dodostatic.net/static/Img/Products/5f11f129fd7448ef90d3057730f739d9_584x584.png",
-      "title": "Мясная",
+      "title": "Meaty boom",
       "types": [0, 1],
       "sizes": [26, 30, 40],
-      "price": 285,
-      "category": 1,
-      "rating": 6
+      "price": 11.95,
+      "category": 5,
+      "rating": 6,
+      "ingredients": "Chicken, ham, spicy pepperoni, spicy chorizo, mozzarella, signature tomato sauce"
     },
     {
       "id": 11,
       "imageUrl": "https://cdn-irec.r-99.com/sites/default/files/imagecache/300o/product-images/1803601/K4plOyLhbSjBjSegSPZ2A.png",
-      "title": "Четыре сыра 🌱",
+      "title": "Four cheeses 🌱",
       "types": [0, 1],
       "sizes": [26, 30, 40],
-      "price": 285,
+      "price": 7.66,
       "category": 2,
-      "rating": 6
+      "rating": 6,
+      "ingredients": "Blue cheese, cheddar and parmesan cheese mix, mozzarella, signature alfredo sauce"
     },
     {
       "id": 12,
       "imageUrl": "https://cdn.dodostatic.net/static/Img/Products/fa971e3178d445dcabc087b8104b79b0_584x584.png",
-      "title": "Диабло 🌶️",
+      "title": "Diablo 🌶️",
       "types": [0, 1],
       "sizes": [26, 30, 40],
-      "price": 265,
+      "price": 12.66,
       "category": 4,
-      "rating": 6
+      "rating": 6,
+      "ingredients": "Spicy chorizo, hot jalapeno peppers, BBQ sauce, meatballs, tomatoes, bell peppers, red onion, mozzarella, signature tomato sauce"
     },
     {
       "id": 13,
       "imageUrl": "https://cdn.dodostatic.net/static/Img/Products/b5905cf333a2492fbfb38f3812c82718_584x584.png",
-      "title": "Колбаски барбекю",
+      "title": "BBQ sausages",
       "types": [0, 1],
       "sizes": [26, 30, 40],
-      "price": 265,
+      "price": 15.75,
       "category": 3,
-      "rating": 3
+      "rating": 3,
+      "ingredients": "Spicy chorizo, barbecue sauce, tomatoes, red onion, mozzarella, signature tomato sauce"
     },
     {
       "id": 14,
       "imageUrl": "https://cdn.dodostatic.net/static/Img/Products/5cbf7363d54d4cfcb1dad822f16fa261_584x584.png",
-      "title": "Овощи гриль",
+      "title": "Grilled vegetables",
       "types": [0, 1],
       "sizes": [26, 30, 40],
-      "price": 265,
+      "price": 12.69,
       "category": 3,
-      "rating": 3
+      "rating": 3,
+      "ingredients": "Mushrooms, tomatoes, sweet peppers, red onions, cheese cubes, mozzarella, special tomato sauce, Italian herbs"
     },
     {
       "id": 15,
       "imageUrl": "https://cdn.dodostatic.net/static/Img/Products/16ae64b429094953b4751dc9b472cf84_584x584.png",
-      "title": "Индейка с овощами гриль",
+      "title": "Grilled turkey with vegetables",
       "types": [0, 1],
       "sizes": [26, 30, 40],
-      "price": 265,
+      "price": 14.15,
       "category": 3,
-      "rating": 3
+      "rating": 3,
+      "ingredients": "Turkey, bacon, barbecue sauce, red onion, mozzarella, special tomato sauce"
     },
     {
       "id": 16,
       "imageUrl": "https://cdn.dodostatic.net/static/Img/Products/edd589e51e394a79ab2996e6a06415ec_584x584.png",
-      "title": "Гавайская",
+      "title": "Hawaiian",
       "types": [0, 1],
       "sizes": [26, 30, 40],
-      "price": 265,
+      "price": 8.99,
       "category": 1,
-      "rating": 3
+      "rating": 3,
+      "ingredients": "Ham, pineapple, mozzarella, signature tomato sauce"
     },
     {
       "id": 17,
       "imageUrl": "https://cdn.dodostatic.net/static/Img/Products/46035156224b4a77b18231cbec60217e_584x584.jpeg",
-      "title": "Буженина с клюквенным соусом",
+      "title": "Boiled pork with cranberry sauce",
       "types": [0, 1],
       "sizes": [26, 30, 40],
-      "price": 265,
+      "price": 16.99,
       "category": 1,
-      "rating": 3
+      "rating": 3,
+      "ingredients": "Boiled pork, cranberry sauce, lingonberries, red onion, mozzarella, signature alfredo sauce"
     },
     {
       "id": 18,
       "imageUrl": "https://cdn.dodostatic.net/static/Img/Products/180c12abfa11447dafdb17a261bf1812_584x584.png",
-      "title": "Двойная пепперони",
+      "title": "Double pepperoni",
       "types": [0, 1],
       "sizes": [26, 30, 40],
-      "price": 399,
+      "price": 18.99,
       "category": 5,
-      "rating": 3
+      "rating": 3,
+      "ingredients": "Double spicy pepperoni, extra mozzarella, signature tomato sauce"
     },
     {
       "id": 19,
       "imageUrl": "https://cdn.dodostatic.net/static/Img/Products/5ac90c81176047ceb1a10f7ed57eef2e_584x584.png",
-      "title": "Цыпленок ранч",
+      "title": "Chicken ranch",
       "types": [0, 1],
       "sizes": [26, 30, 40],
-      "price": 399,
+      "price": 14.99,
       "category": 1,
-      "rating": 3
+      "rating": 3,
+      "ingredients": "Chicken, ham, ranch sauce, mozzarella, tomatoes, garlic"
     },
     {
       "id": 20,
       "imageUrl": "https://img.postershop.me/5699/Products/2130805_1630067516.683_original.png",
-      "title": "Греческая 🌱",
+      "title": "Greek 🌱",
       "types": [0, 1],
       "sizes": [26, 30, 40],
-      "price": 399,
+      "price": 8.55,
       "category": 2,
-      "rating": 3
+      "rating": 3,
+      "ingredients": "Mozzarella,tomatoes,olives,champignons,green pepper"
+    },
+    {
+      "id": 21,
+      "imageUrl": "https://cdn.dodostatic.net/static/Img/Products/fd25b02ce0ff462a878aa1aa4539f3b5_584x584.png",
+      "title": "Cheese chicken",
+      "types": [0, 1],
+      "sizes": [26, 30, 40],
+      "price": 8.55,
+      "category": 1,
+      "rating": 3,
+      "ingredients": "Chicken, mozzarella, cheddar and parmesan cheeses, cheese sauce, tomatoes, signature alfredo sauce, garlic"
     }
+
+
+
+    
 
 ]}
 

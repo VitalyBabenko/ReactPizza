@@ -1,4 +1,6 @@
-.notFoundBlock {
-    text-align: center;
-    margin:150px 0;
+.root {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  text-align: center;
+  margin: 150px auto;
 }

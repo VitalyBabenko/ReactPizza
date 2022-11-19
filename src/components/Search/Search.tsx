@@ -1,9 +1,9 @@
 import { FC, useEffect, useRef, useState } from "react";
+import { ReactComponent as SearchIcon } from "../../assets/img/search-icon.svg";
+import { ReactComponent as CloseIcon } from "../../assets/img/close-icon.svg";
 import style from "./Search.module.scss";
-import searchIcon from "../../img/search-icon.svg";
-import closeIcon from "../../img/close-icon.svg";
-import { changeSearchValue } from "../../store/filter/filterSlice";
-import { useAppDispatch } from "../../hooks/useRedux";
+import { changeCurrentPage, changeSearchValue } from "../../store/filter/slice";
+import { useAppDispatch } from "../../hooks/redux";
 import useDebounce from "../../hooks/useDebounce";
 
 const Search: FC = () => {
@@ -14,6 +14,7 @@ const Search: FC = () => {
 
   useEffect(() => {
     dispatch(changeSearchValue(debouncedSearch));
+    dispatch(changeCurrentPage(1));
     // eslint-disable-next-line
   }, [debouncedSearch]);
 
@@ -25,15 +26,15 @@ const Search: FC = () => {
 
   return (
     <div className={style.root}>
-      <img src={searchIcon} alt="search-icon" />
+      <SearchIcon />
       <input
         ref={inputRef}
         value={value}
         onChange={(e) => setValue(e.target.value)}
         type="text"
-        placeholder="Поиск пиццы..."
+        placeholder="Search pizza..."
       />
-      {value && <img onClick={clearInput} src={closeIcon} alt="close-icon" />}
+      {value && <CloseIcon onClick={clearInput} />}
     </div>
   );
 };

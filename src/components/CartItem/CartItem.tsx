@@ -1,17 +1,17 @@
 import { FC } from "react";
 import style from "./CartItem.module.scss";
 import { CartPizza } from "../../store/cart/types";
-import CartItemButton from "./CartItemButton/CartItemButton";
-import { useAppDispatch } from "../../hooks/useRedux";
-import { addItem, minusCount, removeItem } from "../../store/cart/cartSlice";
+import { useAppDispatch } from "../../hooks/redux";
+import { addItem, minusCount, removeItem } from "../../store/cart/slice";
+import { PlusBtn } from "../Buttons";
 
 const CartItem: FC<{ cartPizza: CartPizza }> = ({ cartPizza }) => {
   const dispatch = useAppDispatch();
 
-  const handleClickPlus = () => dispatch(addItem(cartPizza));
-  const handleClickMinus = () =>
-    cartPizza.count > 1 && dispatch(minusCount(cartPizza.id));
+  const handlePlus = () => dispatch(addItem(cartPizza));
+  const handleMinus = () => dispatch(minusCount(cartPizza.id));
   const handleRemoveItem = () => dispatch(removeItem(cartPizza.id));
+  const totalPizzaPrice = (cartPizza.price * cartPizza.count).toFixed(2);
 
   return (
     <div className={style.root}>
@@ -19,16 +19,20 @@ const CartItem: FC<{ cartPizza: CartPizza }> = ({ cartPizza }) => {
       <div className={style.info}>
         <h3>{cartPizza.title}</h3>
         <p>
-          {cartPizza.type} тесто, {cartPizza.size} см.
+          {cartPizza.type} dough, {cartPizza.size} cm.
         </p>
       </div>
       <div className={style.counter}>
-        <CartItemButton id={"minus"} onClick={handleClickMinus} />
+        <PlusBtn
+          className={style.minus}
+          disabled={cartPizza.count === 1}
+          onClick={handleMinus}
+        />
         <b>{cartPizza.count}</b>
-        <CartItemButton id={"plus"} onClick={handleClickPlus} />
+        <PlusBtn className={style.plus} onClick={handlePlus} />
       </div>
-      <b className={style.price}>{cartPizza.price * cartPizza.count} $</b>
-      <CartItemButton id={"remove"} onClick={handleRemoveItem} />
+      <b className={style.price}>{totalPizzaPrice} $</b>
+      <PlusBtn className={style.remove} onClick={handleRemoveItem} />
     </div>
   );
 };
