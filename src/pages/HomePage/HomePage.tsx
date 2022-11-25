@@ -19,18 +19,18 @@ const Home: FC = () => {
     useAppSelector(filterSelector);
 
   const getPizzas = async () => {
-    const _sort = sort.property.replace("-", "");
-    const _order = sort.property.includes("-") ? "asc" : "desc";
+    const sortBy = sort.property.replace("-", "");
+    const order = sort.property.includes("-") ? "asc" : "desc";
     const category = categoryId > 0 ? String(categoryId) : undefined;
-    const q = searchValue;
+    const title = searchValue ? searchValue : undefined;
 
     dispatch(
       fetchPizzas({
-        _sort,
-        _order,
+        sortBy,
+        order,
         category,
-        q,
-        _page: currentPage,
+        title,
+        page: currentPage,
       })
     );
   };

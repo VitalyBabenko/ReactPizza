@@ -6,11 +6,16 @@ import { Pizza, SearchPizzaParams } from "./types";
 export const fetchPizzas = createAsyncThunk<Pizza[], SearchPizzaParams>(
   "pizzas/fetch",
   async (params, thunkAPI) => {
-    const { q, _sort, _order, category, _page } = params;
-    const resp = await axios.get<Pizza[]>(`http://localhost:3001/pizzas`, {
-      params: { q, _sort, _order, _page, _limit: 8, category },
-    });
-    thunkAPI.dispatch(setTotalCount(Number(resp.headers["x-total-count"])));
-    return resp.data;
+    const { title, sortBy, order, category, page } = params;
+    const { data } = await axios.get(
+      `https://6380caf6786e112fe1ba2b6e.mockapi.io/pizzas`,
+      {
+        params: { title, sortBy, order, page, limit: 8, category },
+      }
+    );
+    const pizzas: Pizza[] = data.items;
+    const count: number = Number(data.count);
+    thunkAPI.dispatch(setTotalCount(count));
+    return pizzas;
   }
 );

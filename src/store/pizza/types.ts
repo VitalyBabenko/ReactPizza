@@ -17,11 +17,11 @@ export enum Status {
 }
 
 export type SearchPizzaParams = {
-  _sort: string;
-  _order: "asc" | "desc";
+  sortBy: string;
+  order: "asc" | "desc";
   category: string | undefined;
-  q: string;
-  _page: number;
+  title: string | undefined;
+  page: number;
 };
 
 export interface PizzasState {
