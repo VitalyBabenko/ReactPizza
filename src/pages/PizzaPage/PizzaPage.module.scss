@@ -4,7 +4,7 @@
 .root {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 80px 140px 60px 160px 50px 45px;
+  grid-template-rows: 80px 150px 70px 160px 50px 45px;
   grid-template-areas:
     "goBack goBack"
     "img title"
@@ -12,8 +12,7 @@
     "img selector"
     "img price"
     "img button";
-  @include container($width: $container-width);
-  padding: 10px 0 200px;
+  padding: 10px 5% 200px;
 
   a:first-child {
     grid-area: goBack;
@@ -23,10 +22,13 @@
     width: 165px;
   }
 
-  img:first-child {
+  img[alt="pizza"] {
+    margin-top: 50px;
+    width: inherit;
+    height: 100%;
     grid-area: img;
-    width: 80%;
     justify-self: center;
+    box-sizing: border-box;
   }
 
   h2 {
@@ -64,5 +66,66 @@
     grid-area: button;
     justify-self: start;
     width: 20vw;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .root {
+    grid-template-rows: 65px 130px 70px 160px 50px 45px;
+  }
+
+  .root .selector {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 915px) {
+  .root {
+    grid-template-rows: 65px 120px 80px 130px 50px 45px;
+    padding: 10px 5% 50px;
+
+    img[alt="pizza"] {
+      height: 350px;
+    }
+
+    .selector {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .root {
+    grid-template-areas:
+      "goBack goBack"
+      "img img"
+      "title title"
+      "ingredients ingredients"
+      "selector selector"
+      "price button";
+    grid-template-rows: auto 1fr 100px 60px 135px 45px;
+    text-align: center;
+
+    a:first-child {
+      margin: 0;
+    }
+
+    img[alt="pizza"] {
+      margin-top: 20px;
+    }
+
+    button:last-child {
+      justify-self: end;
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 455px) {
+  .root {
+    img[alt="pizza"] {
+      width: 60vw;
+      height: inherit;
+    }
   }
 }

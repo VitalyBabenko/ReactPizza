@@ -28,7 +28,9 @@ const PizzaPage: FC = () => {
 
   useEffect(() => {
     const fetchPizza = async (id: string | undefined) => {
-      const { data } = await axios.get(`http://localhost:3001/pizzas/${id}`);
+      const { data } = await axios.get(
+        `https://6380caf6786e112fe1ba2b6e.mockapi.io/pizzas/${id}`
+      );
       setPizza(data);
     };
     fetchPizza(id);

@@ -4,6 +4,7 @@
 
 .root {
   display: flex;
+  width: 100%;
   grid-area: categories;
 
   li {
@@ -27,6 +28,19 @@
     &.active {
       background-color: #282828;
       color: #fff;
+    }
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .root {
+    overflow-x: scroll;
+    -ms-overflow-style: unset;
+    overflow: -moz-scrollbars-none;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
     }
   }
 }

@@ -32,7 +32,7 @@ const Header: FC = () => {
         <Logo />
         <div>
           <h1>React Pizza</h1>
-          <p>самая вкусная пицца во вселенной</p>
+          <p>the most delicious pizza in the universe</p>
         </div>
       </Link>
 
