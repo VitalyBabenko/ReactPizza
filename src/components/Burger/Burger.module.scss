@@ -1,0 +1,122 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.root {
+  display: none;
+  width: 35px;
+  height: 24px;
+
+  label {
+    position: relative;
+
+    .top,
+    .middle,
+    .middle::before,
+    .bottom {
+      content: "";
+      position: absolute;
+      top: 0;
+      display: block;
+      height: 3px;
+      width: 35px;
+      background-color: $black;
+      transition: all 0.25s ease-in-out;
+    }
+
+    .middle {
+      top: 10px;
+    }
+
+    .bottom {
+      top: 20px;
+    }
+  }
+
+  label.burgerOpened {
+    .top,
+    .bottom {
+      opacity: 0;
+    }
+
+    .middle {
+      transform: rotate(45deg);
+
+      &::before {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  .popup {
+    position: absolute;
+    top: 186px;
+    left: 9%;
+    padding: 20px;
+    width: 82%;
+    height: 500px;
+    background-color: #fff;
+    z-index: 2;
+
+    .cartBlock {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 30px;
+
+      span {
+        font-weight: normal;
+      }
+
+      a {
+        // CartLink
+        display: flex;
+        min-width: 150px;
+        width: fit-content;
+      }
+    }
+
+    & > ul {
+      // Categories
+      @include flex($direction: column, $align: center);
+      height: 360px;
+
+      li {
+        width: fit-content;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+    }
+
+    & > :last-child {
+      // Search
+      display: flex;
+      justify-content: space-between;
+      height: 47px;
+      margin-bottom: 20px;
+
+      input {
+        display: block;
+        position: static;
+        width: max-content;
+      }
+
+      svg {
+        display: block;
+      }
+
+      button {
+        @include flex($align: center);
+        @extend %appButton;
+        background-color: $orange;
+        color: #fff;
+        // padding: 10px 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1066px) {
+  .root {
+    display: block;
+  }
+}

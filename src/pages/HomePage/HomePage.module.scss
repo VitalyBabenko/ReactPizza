@@ -26,3 +26,22 @@
     gap: 65px 15px;
   }
 }
+
+@media screen and (max-width: 1066px) {
+  .root {
+    grid-template-areas:
+      "title title sort sort"
+      "pizzas pizzas pizzas pizzas"
+      "pagination pagination pagination pagination";
+    grid-template-rows: 90px auto auto auto;
+    padding: 0 0 40px;
+
+    & > ul:first-child {
+      display: none;
+    }
+
+    &:first-of-type h2 {
+      margin: auto 0;
+    }
+  }
+}

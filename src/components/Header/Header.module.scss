@@ -8,79 +8,19 @@
   padding: 40px 0;
   width: $container-width;
   margin: 0 auto;
-
-  .logo {
-    display: flex;
-
-    svg {
-      width: 45px;
-      margin-right: 15px;
-    }
-
-    h1 {
-      color: #181818;
-      font-size: 24px;
-      letter-spacing: 1%;
-      text-transform: uppercase;
-      font-weight: 800;
-    }
-
-    p {
-      width: 80%;
-      color: #7b7b7b;
-    }
-  }
-
-  .cart {
-    @include flex($align: center);
-    @extend %appButton;
-    background-color: $orange;
-    padding: 10px 20px;
-
-    &:hover {
-      background-color: darken($orange, 8%);
-    }
-
-    &:active {
-      background-color: darken($orange, 12%);
-      transform: translateY(1px);
-    }
-
-    .delimiter {
-      width: 1px;
-      height: 25px;
-      background-color: rgba(255, 255, 255, 0.25);
-      margin-left: 14px;
-      margin-right: 14px;
-    }
-
-    @include noselect();
-
-    svg {
-      width: 20px;
-      margin-right: 8px;
-      margin-bottom: 1px;
-      path,
-      circle {
-        stroke: white;
-      }
-    }
-
-    span {
-      font-weight: 600;
-      font-size: 16px;
-      color: white;
-    }
-  }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1066px) {
   .root {
-    .logo {
-      align-items: center;
-      p {
-        display: none;
-      }
+    justify-content: end;
+
+    :first-child {
+      margin-right: auto;
+    }
+
+    svg[height="512"],
+    input {
+      display: none;
     }
   }
 }
