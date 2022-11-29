@@ -1,0 +1,72 @@
+@import "../../scss/mixins";
+
+.root {
+  @include flex($align: center);
+  @extend %appButton;
+  background-color: $orange;
+  padding: 10px 20px;
+  @include noselect();
+
+  &:hover {
+    background-color: darken($orange, 8%);
+  }
+
+  &:active {
+    background-color: darken($orange, 12%);
+    transform: translateY(1px);
+  }
+
+  .delimiter {
+    width: 1px;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.25);
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+
+  svg {
+    width: 20px;
+    margin-right: 8px;
+    margin-bottom: 1px;
+    path,
+    circle {
+      stroke: white;
+    }
+  }
+
+  span {
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 1066px) {
+  .root {
+    min-width: 35px;
+    width: fit-content;
+
+    height: 35px;
+    justify-content: flex-end;
+    background-color: inherit;
+    border: none;
+    padding: 0;
+
+    span,
+    .delimiter {
+      // width: 35px;
+      display: none;
+    }
+
+    svg {
+      width: 35px;
+      margin-right: 12px;
+      height: 100%;
+
+      path,
+      circle {
+        stroke: $black;
+      }
+    }
+  }
+}

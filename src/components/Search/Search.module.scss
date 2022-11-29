@@ -45,11 +45,9 @@
 @media screen and (max-width: 1270px) {
   .root {
     left: 0;
-  }
-}
 
-@media screen and (max-width: 1270px) {
-  .root input {
-    width: 25vw;
+    input {
+      width: 25vw;
+    }
   }
 }
