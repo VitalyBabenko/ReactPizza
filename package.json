@@ -2,6 +2,7 @@
   "name": "react-pizza",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://vitalybabenko.github.io/ReactPizza",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.0",
     "@testing-library/jest-dom": "^5.16.5",
@@ -13,7 +14,6 @@
     "@types/react-dom": "^18.0.8",
     "@types/react-redux": "^7.1.24",
     "axios": "^1.1.3",
-    "gh-pages": "^4.0.0",
     "json-server": "^0.17.0",
     "react": "^18.2.0",
     "react-content-loader": "^6.2.0",
@@ -30,7 +30,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -51,6 +53,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "typed-scss-modules": "^7.0.1"
   }
 }
