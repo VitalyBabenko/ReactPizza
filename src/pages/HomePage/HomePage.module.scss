@@ -43,5 +43,22 @@
     &:first-of-type h2 {
       margin: auto 0;
     }
+
+    & > ul:last-child {
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .root {
+    grid-template-areas:
+      "sort sort sort sort"
+      "pizzas pizzas pizzas pizzas"
+      "pagination pagination pagination pagination";
+
+    &:first-of-type h2 {
+      display: none;
+    }
   }
 }

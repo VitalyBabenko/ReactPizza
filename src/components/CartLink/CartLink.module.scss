@@ -43,7 +43,9 @@
 
 @media screen and (max-width: 1066px) {
   .root {
-    width: 50px !important;
+    min-width: 35px;
+    width: fit-content;
+
     height: 35px;
     justify-content: flex-end;
     background-color: inherit;
@@ -52,13 +54,14 @@
 
     span,
     .delimiter {
+      // width: 35px;
       display: none;
     }
 
     svg {
-      width: 70%;
+      width: 35px;
+      margin-right: 12px;
       height: 100%;
-      margin-right: 0;
 
       path,
       circle {

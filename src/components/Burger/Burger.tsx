@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { useAppSelector } from "../../hooks/redux";
 import { filterSelector } from "../../store/filter/selectors";
 import Categories from "../Categories/Categories";
@@ -8,6 +8,8 @@ import style from "./Burger.module.scss";
 const Burger: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { categoryId } = useAppSelector(filterSelector);
+
+  useEffect(() => setIsOpen(false), [categoryId]);
 
   return (
     <div className={style.root}>
@@ -22,11 +24,12 @@ const Burger: FC = () => {
 
       {isOpen && (
         <div className={style.popup}>
-          <Categories categoryId={categoryId} />
           <div className={style.searchBlock}>
             <Search />
             <button onClick={() => setIsOpen(false)}>search</button>
           </div>
+
+          <Categories categoryId={categoryId} />
         </div>
       )}
     </div>

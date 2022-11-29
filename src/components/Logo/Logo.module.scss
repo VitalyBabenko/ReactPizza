@@ -37,6 +37,10 @@
 
 @media screen and (max-width: 420px) {
   .root {
+    div {
+      width: 160px;
+    }
+
     svg {
       display: none;
     }
