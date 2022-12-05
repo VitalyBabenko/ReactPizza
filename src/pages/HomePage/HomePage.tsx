@@ -11,6 +11,7 @@ import { pizzasSelector } from "../../store/pizza/selectors";
 import style from "./HomePage.module.scss";
 import NotFoundBlock from "../../components/NotFoundBlock/NotFoundBlock";
 import ErrorPage from "../ErrorPage/ErrorPage";
+import Slider from "../../components/Slider/Slider";
 
 const Home: FC = () => {
   const dispatch = useAppDispatch();
@@ -51,6 +52,7 @@ const Home: FC = () => {
   if (status === "error") return <ErrorPage />;
   return (
     <div className={style.root}>
+      <Slider />
       <Categories categoryId={categoryId} />
       <Sort sort={sort} />
       <h2>All pizzas</h2>

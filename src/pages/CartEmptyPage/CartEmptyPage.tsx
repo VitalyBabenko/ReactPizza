@@ -1,6 +1,7 @@
 import { FC } from "react";
 import style from "./CartEmptyPage.module.scss";
 import emptyCartImg from "../../assets/img/empty-cart.png";
+
 import { BackHomeBtn } from "../../components/Buttons";
 
 const CartEmpty: FC = () => {
@@ -13,6 +14,7 @@ const CartEmpty: FC = () => {
         To order pizza, go to the main page.
       </p>
       <img src={emptyCartImg} alt="Empty cart" />
+
       <BackHomeBtn />
     </div>
   );

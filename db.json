@@ -241,6 +241,17 @@
       "category": 1,
       "rating": 3,
       "ingredients": "Chicken, mozzarella, cheddar and parmesan cheeses, cheese sauce, tomatoes, signature alfredo sauce, garlic"
+    },
+    {
+      "id": "23",
+      "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/27c9bbd0af3a4d1d84a086d9c2f1656d_584x584.webp",
+      "title": "Pepperoni fresh",
+      "types": [0, 1],
+      "sizes": [26, 30, 40],
+      "price": 8.55,
+      "category": 5,
+      "rating": 9,
+      "ingredients": "Spicy pepperoni, extra mozzarella, tomatoes, signature tomato sauce"
     }
   ]
 }

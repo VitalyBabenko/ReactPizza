@@ -3,8 +3,9 @@
 .root {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 50px 100px auto auto;
+  grid-template-rows: 390px 50px 100px auto auto;
   grid-template-areas:
+    "slider slider slider slider "
     "categories categories categories categories"
     "title title sort sort"
     "pizzas pizzas pizzas pizzas"
